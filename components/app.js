@@ -16,71 +16,64 @@ class App extends Component {
           <Tab eventKey={1} title="Country">
             <h2>Country Standard</h2>
             <form>
-                <Radio >
-                  New Zealand NZS4512:1997                    
-                </Radio>
-                <Radio >
-                  New Zealand NZS4512: 2003/2010
-                </Radio>
-                <Radio >
-                  Australia AS4428.1
-                </Radio>
-                <Radio >
-                  Australia AS7240.2
-                </Radio>
+                <FormGroup>
+                    <Radio name="country">
+                      New Zealand NZS4512:1997
+                    </Radio>
+                    <Radio name="country">
+                      New Zealand NZS4512: 2003/2010
+                    </Radio>
+                    <Radio name="country">
+                      Australia AS4428.1
+                    </Radio>
+                    <Radio name="country">
+                      Australia AS7240.2
+                    </Radio>
+                </FormGroup>
             </form>
           </Tab>
           <Tab eventKey={2} title="System">
             <h2>System</h2>
             <form>
-                <Radio >
-                  New Zealand NZS4512:1997                    
+                <Radio name="system" data-toggle="Button" >
+                  Conventional                    
                 </Radio>
-                <Radio >
-                  New Zealand NZS4512: 2003/2010
-                </Radio>
-                <Radio >
-                  Australia AS4428.1
-                </Radio>
-                <Radio >
-                  Australia AS7240.2
+                <Radio name="system">
+                    Analog
                 </Radio>
             </form>
           </Tab>
-          <Tab eventKey={3} title="Panel">
-            <h2>Type of Panel</h2>
-            <form>
-                <Radio >
-                  New Zealand NZS4512:1997                    
-                </Radio>
-                <Radio >
-                  New Zealand NZS4512: 2003/2010
-                </Radio>
-                <Radio >
-                  Australia AS4428.1
-                </Radio>
-                <Radio >
-                  Australia AS7240.2
-                </Radio>
-            </form>
-          </Tab>
-          <Tab eventKey={4} title="Detail">
+          <Tab eventKey={3} title="Detail">
             <h2>Panel Detail Type</h2>
           </Tab>
-          <Tab eventKey={5} title="Power Supply">
+          <Tab eventKey={4} title="Power Supply">
             <h2>Additional Power Supply</h2>
           </Tab>
-          <Tab eventKey={6} title="Amp">
+          <Tab eventKey={5} title="Amp">
             <h2>Amp</h2>
           </Tab>
-          <Tab eventKey={7} title="LED">
+          <Tab eventKey={6} title="LED">
             <h2>LED</h2>
           </Tab>
-          <Tab eventKey={8} title="Inter">
+          <Tab eventKey={7} title="Inter">
             <h2>Inter</h2>
           </Tab>
-          <Tab eventKey={9} title="Misc">
+          <Tab eventKey={8} title="Misc">
             <h2>Misc</h2>
+          </Tab>
+          <Tab eventKey={9} title="Panel Items">
+            <h2>Panel Items</h2>
+            <Table>
+                <tbody>
+                    <td valign="bottom" >Panel Size (Standard or Networked Panel 4512:2003):</td>
+                    <td align="left" valign="bottom">
+                        <select name="cabinet_size" size="1">
+                            <option value="F120AF-3">FS 2 Loop Panel 900mm</option>
+                            <option value="F120AR-3">RS 2 Loop Panel 900mm</option>
+                        </select>
+                    </td>
+                </tbody>
+            </Table>
           </Tab>
           <Tab eventKey={10} title="Summary">
             <h2>Summary</h2>
