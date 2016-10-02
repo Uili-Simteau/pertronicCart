@@ -33,13 +33,86 @@ class App extends Component {
             </form>
           </Tab>
           <Tab eventKey={2} title="System">
-            <h2>System</h2>
+            <h2>Panel Selection</h2>
             <form>
                 <Radio name="system" data-toggle="Button" >
-                  Conventional                    
+                  <span>F120A   </span>       
+                  <select name="cabinet_size" size="1">
+                      <option value="F120AF-3">
+                          FS 2 Loop Panel 900mm
+                      </option>
+                      <option value="F120AR-3">
+                          RS 2 Loop Panel 900mm
+                      </option>
+                  </select>                
                 </Radio>
                 <Radio name="system">
-                    Analog
+                    <span>F100A   </span>
+                    <select name="cabinet_size" size="1">
+                        <option value="F100AF-3">
+                            FS 2 Loop Panel 600mm
+                        </option>
+                        <option value="F100AR-3">
+                            RS 2 Loop Panel 600mm
+                        </option>
+                        <option value="F100ATF-3">
+                            FS 2 Loop Panel 900mm
+                        </option>
+                        <option value="F100ATR-3">
+                            RS 2 Loop Panel 900mm
+                        </option>
+                    </select>
+                </Radio>
+                <Radio name="system">
+                    <span>F16E   </span>
+                    <select name="cabinet_size" size="1">
+                        <option value="F16EMF">
+                            F16e 8cct Mini FS
+                        </option>
+                        <option value="F16EMR">
+                            F16e 8cct Mini RS
+                        </option>
+                        <option value="F16ELF">
+                            F16e 8cct Large FS
+                        </option>
+                        <option value="F16ELR">
+                            F16e 8cct Large RS
+                        </option>
+                        <option value="F16ETF">
+                            F16e 8cct Tall FS
+                        </option>
+                        <option value="F16ETR">
+                            F16e 8cct Tall RS
+                        </option>
+                    </select>
+                </Radio>
+                <Radio name="system">
+                    <span>F4   </span>
+                    <select name="F4" size="1">
+                        <option value="F4FS-3">
+                            F4FS
+                        </option>
+                        <option value="F4RS-3">
+                            F4RS
+                        </option>
+                        <option value="F4FS-3EA">
+                            F4FS + EVAC20W12V
+                        </option>
+                        <option value="F4RS-3EA">
+                            F4RS + EVAC20W12V
+                        </option>
+                    </select>
+                </Radio>
+                <Radio name="system">
+                    <span>F1   </span>
+                    <select name="F1" size="1">
+                        <option value="F1-3">
+                            F1
+                        </option>
+                        <option value="F1-3EA">
+                            F1 + EVAC20W12V
+                        </option>
+                    </select>
                 </Radio>
             </form>
           </Tab>
@@ -54,6 +127,170 @@ class App extends Component {
           </Tab>
           <Tab eventKey={6} title="LED">
             <h2>LED</h2>
+            <form>
+                <FormGroup>
+                <Radio name="LED" value="F100PDB12">
+                    12 Way Smart LED Display Bd for F100, F120, F16E:  
+                    <select>
+                      <option>
+                        0
+                      </option>
+                      <option>
+                        1
+                      </option>
+                      <option>
+                        2
+                      </option>
+                      <option>
+                        3
+                      </option>
+                      <option>
+                        4
+                      </option>
+                    </select>
+                </Radio>
+                <Radio name="LED" value="F100PDB">
+                    8 Way LED Display Ext Board for F100, F120, F16E 
+                    <select>
+                      <option>
+                        0
+                      </option>
+                      <option>
+                        1
+                      </option>
+                      <option>
+                        2
+                      </option>
+                      <option>
+                        3
+                      </option>
+                      <option>
+                        4
+                      </option>
+                    </select>
+                </Radio>
+                <Radio name="LED" value="F100ZDRLY">
+                    8 Way Display Relay Extender Board 24V 
+                    <select>
+                      <option>
+                        0
+                      </option>
+                      <option>
+                        1
+                      </option>
+                      <option>
+                        2
+                      </option>
+                      <option>
+                        3
+                      </option>
+                      <option>
+                        4
+                      </option>
+                    </select>
+                </Radio>                
+                <Radio name="LED" value="L485LAC">
+                    RS485 LED Address Controller for F100, F120:  
+                    <select>
+                      <option>
+                        0
+                      </option>
+                      <option>
+                        1
+                      </option>
+                      <option>
+                        2
+                      </option>
+                      <option>
+                        3
+                      </option>
+                      <option>
+                        4
+                      </option>
+                    </select>
+                </Radio>                
+                <Radio name="LED" value="LAC12W">
+                    LED Zone Address Offset for 12-Way LED Board 
+                    <select>
+                      <option>
+                        0
+                      </option>
+                      <option>
+                        1
+                      </option>
+                      <option>
+                        2
+                      </option>
+                      <option>
+                        3
+                      </option>
+                      <option>
+                        4
+                      </option>
+                    </select>
+                </Radio>                
+                <Radio name="LED" value="48WOC-IF">
+                    RS485 to 48 Way Open Collector O/P Board 
+                    <select>
+                      <option>
+                        0
+                      </option>
+                      <option>
+                        1
+                      </option>
+                      <option>
+                        2
+                      </option>
+                      <option>
+                        3
+                      </option>
+                      <option>
+                        4
+                      </option>
+                    </select>
+                </Radio>                
+                <Radio name="LED" value="L485LAC-S">
+                    RS485 LED Address Controller for F100,F120, with STEADY outputs 
+                    <select>
+                      <option>
+                        0
+                      </option>
+                      <option>
+                        1
+                      </option>
+                      <option>
+                        2
+                      </option>
+                      <option>
+                        3
+                      </option>
+                      <option>
+                        4
+                      </option>
+                    </select>
+                </Radio>                
+                <Radio name="LED" value="F4-RMAX">
+                    Remote LED Mimic/Aux Relay Module 
+                    <select>
+                      <option>
+                        0
+                      </option>
+                      <option>
+                        1
+                      </option>
+                      <option>
+                        2
+                      </option>
+                      <option>
+                        3
+                      </option>
+                      <option>
+                        4
+                      </option>
+                    </select>
+                </Radio>
+                </FormGroup>
+            </form>
           </Tab>
           <Tab eventKey={7} title="Inter">
             <h2>Inter</h2>
@@ -80,6 +317,9 @@ class App extends Component {
           </Tab>            
         </Tabs>
         <hr/>
+        
+//Mock checkoutCart
+
         <div className="checkoutCart">
           <Table striped bordered condensed hover>
             <thead>
