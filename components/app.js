@@ -17,16 +17,16 @@ class App extends Component {
             <h2>Country Standard</h2>
             <form>
                 <FormGroup>
-                    <Radio name="country">
-                      New Zealand NZS4512:1997
+                    <Radio name="country" data-toggle="Button" value="NZS4512: 1997">
+                      New Zealand NZS4512: 1997
                     </Radio>
-                    <Radio name="country">
+                    <Radio name="country" data-toggle="Button" value="NZS4512: 2003/2010">
                       New Zealand NZS4512: 2003/2010
                     </Radio>
-                    <Radio name="country">
+                    <Radio name="country" data-toggle="Button" value="AS4428.1">
                       Australia AS4428.1
                     </Radio>
-                    <Radio name="country">
+                    <Radio name="country" data-toggle="Button" value="AS7240.2">
                       Australia AS7240.2
                     </Radio>
                 </FormGroup>
@@ -124,6 +124,67 @@ class App extends Component {
           </Tab>
           <Tab eventKey={5} title="Amp">
             <h2>Amp</h2>
+              <Radio>
+                <span>
+                  Number of 50W amplifiers required:       
+                </span>
+                <select>
+                  <option value="0">
+                    0
+                  </option>
+                  <option value="1">
+                    1
+                  </option>
+                  <option value="2">
+                    2
+                  </option>
+                  <option value="3">
+                    3
+                  </option>
+                  <option value="4">
+                    4
+                  </option>
+                  <option value="5">
+                    5
+                  </option>
+                  <option value="6">
+                    6
+                  </option>
+                  <option value="7">
+                    7
+                  </option>
+                  <option vlaue="8">
+                    8
+                  </option>
+                </select>
+              <div className="50wAmp">
+                <span>Is 50W apmlifier run by: </span>
+                  <select name="amp_connection" size="1">
+                    <option value="RS485">
+                      RS485
+                    </option>
+                    <option value="Bell Relay">
+                      Bell Relay
+                    </option>
+                  </select>
+                </div>
+              </Radio>  
+              <Radio> 
+                <span>
+                  Number of 20W amplifiers required:       
+                </span>
+                <select>
+                  <option value="0">
+                    0
+                  </option>
+                  <option value="1">
+                    1
+                  </option>
+                  <option value="2">
+                    2
+                  </option>
+                </select>
+              </Radio>
           </Tab>
           <Tab eventKey={6} title="LED">
             <h2>LED</h2>
@@ -318,8 +379,6 @@ class App extends Component {
         </Tabs>
         <hr/>
         
-//Mock checkoutCart
-
         <div className="checkoutCart">
           <Table striped bordered condensed hover>
             <thead>
