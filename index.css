@@ -3,3 +3,7 @@ main{
   flex-wrap: wrap;
   padding-left: 50px;
 }
+
+.checkoutCart{
+    width: 100%;
+}
