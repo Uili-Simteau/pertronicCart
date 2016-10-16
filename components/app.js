@@ -139,7 +139,7 @@ class App extends Component {
                   <option value="7">
                     7
                   </option>
-                  <option vlaue="8">
+                  <option value="8">
                     8
                   </option>
                 </select>
