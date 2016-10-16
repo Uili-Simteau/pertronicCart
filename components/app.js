@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import {  Button, FormGroup, FormControl, Input, InputGroup, Radio, Tab, Tabs, Table  } from 'react-bootstrap';
 import items from '../controllers/index.js'
-// import {Tabs, Tab} from 'react-bootstrap-tabs';
-console.log("items data", items)
+
+console.log("items data", items.id3.productCode);
+
+
 class App extends Component {
 
   constructor (props) {
