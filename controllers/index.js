@@ -1,256 +1,254 @@
-var express = require('express');
-
 const items = {
-    {
+    "item-1" : {
         "id": 1,
         "productCode": "F1",
         "description": "Header",
         "undefined": "FAU"
     },
-    {
+    "item-2" : {
         "id": 2,
         "productCode": "F4",
         "description": "Header",
         "undefined": "FAU"
     },
-    {
+    "item-3" : {
         "id": 3,
         "productCode": "F16",
         "description": "Header",
         "undefined": "FAU"
     },
-    {
+    "item-4" : {
         "id": 4,
         "productCode": "F16MF",
         "description": "unknown",
         "undefined": "FAU"
     },
-    {
+    "item-5" : {
         "id": 5,
         "productCode": "F16MR",
         "description": "unknown",
         "undefined": "FAU"
     },
-    {
+    "item-6" : {
         "id": 6,
         "productCode": "F16LF",
         "description": "unknown",
         "undefined": "FAU"
     },
-    {
+    "item-7" : {
         "id": 7,
         "productCode": "F16LR",
         "description": "unknown",
         "undefined": "FAU"
     },
-    {
+    "item-8" : {
         "id": 8,
         "productCode": "F16E",
         "description": "Header",
         "undefined": "FAU"
     },
-    {
+    "item-9" : {
         "id": 9,
         "productCode": "F16EMF",
         "description": "unknown",
         "undefined": "FAU"
     },
-    {
+    "item-10" : {
         "id": 10,
         "productCode": "F16EMR",
         "description": "unknown",
         "undefined": "FAU"
     },
-    {
+    "item-11" : {
         "id": 11,
         "productCode": "F16ELF",
         "description": "unknown",
         "undefined": "FAU"
     },
-    {
+    "item-12" : {
         "id": 12,
         "productCode": "F16ELF-ARC",
         "description": "unknown",
         "undefined": "FAU"
     },
-    {
+    "item-13" : {
         "id": 13,
         "productCode": "F16ELR",
         "description": "unknown",
         "undefined": "FAU"
     },
-    {
+    "item-14" : {
         "id": 14,
         "productCode": "F16ETF",
         "description": "unknown",
         "undefined": "FAU"
     },
-    {
+    "item-15" : {
         "id": 15,
         "productCode": "F16ETR",
         "description": "unknown",
         "undefined": "FAU"
     },
-    {
+    "item-16" : {
         "id": 16,
         "productCode": "F16E-97",
         "description": "Header",
         "undefined": "FAU"
     },
-    {
+    "item-17" : {
         "id": 17,
         "productCode": "F16EMF-97",
         "description": "unknown",
         "undefined": "FAU"
     },
-    {
+    "item-18" : {
         "id": 18,
         "productCode": "F16EMR-97",
         "description": "unknown",
         "undefined": "FAU"
     },
-    {
+    "item-19" : {
         "id": 19,
         "productCode": "F16ELF-97",
         "description": "unknown",
         "undefined": "FAU"
     },
-    {
+    "item-20" : {
         "id": 20,
         "productCode": "F16ELR-97",
         "description": "unknown",
         "undefined": "FAU"
     },
-    {
+    "item-21" : {
         "id": 21,
         "productCode": "F16ETF-97",
         "description": "unknown",
         "undefined": "FAU"
     },
-    {
+    "item-22" : {
         "id": 22,
         "productCode": "F16ETR-97",
         "description": "unknown",
         "undefined": "FAU"
     },
-    {
+    "item-23" : {
         "id": 23,
         "productCode": "F100",
         "description": "Header",
         "undefined": "FAU"
     },
-    {
+    "item-24" : {
         "id": 24,
         "productCode": "F100AF-3",
         "description": "unknown",
         "undefined": "FAU"
     },
-    {
+    "item-25" : {
         "id": 25,
         "productCode": "F100AF-ARC",
         "undefined": "FAU"
     },
-    {
+    "item-26" : {
         "id": 26,
         "productCode": "F100AF-ARC-INT",
         "undefined": "FAU"
     },
-    {
+    "item-27" : {
         "id": 27,
         "productCode": "F100AR-3",
         "description": "unknown",
         "undefined": "FAU"
     },
-    {
+    "item-28" : {
         "id": 28,
         "productCode": "F100AF4A-3",
         "description": "unknown",
         "undefined": "FAU"
     },
-    {
+    "item-29" : {
         "id": 29,
         "productCode": "F100AR4A-3",
         "description": "unknown",
         "undefined": "FAU"
     },
-    {
+    "item-30" : {
         "id": 30,
         "productCode": "F100ATF-3",
         "description": "unknown",
         "undefined": "FAU"
     },
-    {
+    "item-31" : {
         "id": 31,
         "productCode": "F100ATF-ARC",
         "description": "unknown",
         "undefined": "FAU"
     },
-    {
+    "item-32" : {
         "id": 32,
         "productCode": "F100ATR-3",
         "description": "unknown",
         "undefined": "FAU"
     },
-    {
+    "item-33" : {
         "id": 33,
         "productCode": "F100ADF-3",
         "description": "unknown",
         "undefined": "FAU"
     },
-    {
+    "item-34" : {
         "id": 34,
         "productCode": "F100ADR-3",
         "description": "unknown",
         "undefined": "FAU"
     },
-    {
+    "item-35" : {
         "id": 35,
         "productCode": "F120",
         "description": "Header",
         "undefined": "FAU"
     },
-    {
+    "item-36" : {
         "id": 36,
         "productCode": "F120AF-3",
         "description": "unknown",
         "undefined": "FAU"
     },
-    {
+    "item-37" : {
         "id": 37,
         "productCode": "F120AR-3",
         "description": "unknown",
         "undefined": "FAU"
     },
-    {
+    "item-38" : {
         "id": 38,
         "productCode": "F120AFDC-3",
         "description": "unknown",
         "undefined": "FAU"
     },
-    {
+    "item-39" : {
         "id": 39,
         "productCode": "F120ARDC-3",
         "description": "unknown",
         "undefined": "FAU"
     },
-    {
+    "item-40" : {
         "id": 40,
         "productCode": "F120A-28UNZ",
         "description": "unknown",
         "undefined": "FAU"
     },
-    {
+    "item-41" : {
         "id": 41,
         "productCode": "F120A-40UNZ",
         "description": "unknown",
         "undefined": "FAU"
     },
-    {
+    "item-42" : {
         "id": 42,
         "productCode": "F220",
         "description": "unknown"
     },
-    {
+    "item-43" : {
         "id": 43,
         "productCode": "F120P2LMB",
         "description": "F120A 2 Loop Driver, Mini Board, V2.01, NZ SMD",
@@ -268,191 +266,191 @@ const items = {
         "f120a40unzmax": 9,
         "undefined": "INC"
     },
-    {
+    "item-44" : {
         "id": 44,
         "productCode": "F100LRC",
         "description": "Header",
         "undefined": "CAB"
     },
-    {
+    "item-45" : {
         "id": 45,
         "productCode": "F100LRC",
         "description": "AA Loop Responder Case",
         "undefined": "CAB"
     },
-    {
+    "item-46" : {
         "id": 46,
         "productCode": "SLCABLP",
         "description": "Header",
         "undefined": "MIM"
     },
-    {
+    "item-47" : {
         "id": 47,
         "productCode": "SLCABLPFS",
         "description": "Slim LPFS Mimic Cab+Ind, 438w x 616h x 48d",
         "undefined": "MIM"
     },
-    {
+    "item-48" : {
         "id": 48,
         "productCode": "SLCABLPFS+LCD",
         "description": "Slim LPFS LED Mimic Cab. c/w LCD",
         "undefined": "MIM"
     },
-    {
+    "item-49" : {
         "id": 49,
         "productCode": "SLCABLPRS",
         "description": "Slim LPRS Mimic Cab+Ind, 438w x 616h x 48d",
         "undefined": "MIM"
     },
-    {
+    "item-50" : {
         "id": 50,
         "productCode": "SLCABLPRS+LCD",
         "description": "Slim LPRS LED Mimic Cab. c/w LCD",
         "undefined": "MIM"
     },
-    {
+    "item-51" : {
         "id": 51,
         "productCode": "SLCABMP",
         "description": "Header",
         "undefined": "MIM"
     },
-    {
+    "item-52" : {
         "id": 52,
         "productCode": "SLCABMPFS",
         "description": "Slim MPFS Mimic Cab+Ind, 438w x 426h x 48d",
         "undefined": "MIM"
     },
-    {
+    "item-53" : {
         "id": 53,
         "productCode": "SLCABMPRS",
         "description": "Slim MPRS Mimic Cab+Ind, 438w x 426h x 48d",
         "undefined": "MIM"
     },
-    {
+    "item-54" : {
         "id": 54,
         "productCode": "SLCABEL",
         "description": "Header",
         "undefined": "MIM"
     },
-    {
+    "item-55" : {
         "id": 55,
         "productCode": "SLCABELFS",
         "description": "Slim Extra Lge Mimic Cab+Ind, FS 635w x 650h x78d",
         "undefined": "MIM"
     },
-    {
+    "item-56" : {
         "id": 56,
         "productCode": "SLCABELRS",
         "description": "Slim Extra Lge Mimic Cab+Ind, RS 635w x 650h x 78d",
         "undefined": "MIM"
     },
-    {
+    "item-57" : {
         "id": 57,
         "productCode": "ECF4",
         "description": "Header",
         "undefined": "CAB"
     },
-    {
+    "item-58" : {
         "id": 58,
         "productCode": "ECF4FSCAB",
         "description": "F4FS Cabinet & Blank Index",
         "undefined": "CAB"
     },
-    {
+    "item-59" : {
         "id": 59,
         "productCode": "ECF4RSCAB",
         "description": "F4RS Cabinet & 2 Blank Indexes",
         "undefined": "CAB"
     },
-    {
+    "item-60" : {
         "id": 60,
         "productCode": "EC410H",
         "description": "Header",
         "undefined": "CAB"
     },
-    {
+    "item-61" : {
         "id": 61,
         "productCode": "EC410",
         "description": "410mm Equipment Cabinet & GP",
         "undefined": "CAB"
     },
-    {
+    "item-62" : {
         "id": 62,
         "productCode": "EC410FS",
         "description": "410mm Cab & Gear Plate FS + Index",
         "undefined": "CAB"
     },
-    {
+    "item-63" : {
         "id": 63,
         "productCode": "EC410RS",
         "description": "410mm Cab & Gear Plate RS + Index",
         "undefined": "CAB"
     },
-    {
+    "item-64" : {
         "id": 64,
         "productCode": "EC600H",
         "description": "Header",
         "undefined": "CAB"
     },
-    {
+    "item-65" : {
         "id": 65,
         "productCode": "EC600",
         "description": "600mm Equipment Cabinet & GP",
         "undefined": "CAB"
     },
-    {
+    "item-66" : {
         "id": 66,
         "productCode": "EC600FS",
         "description": "600mm Cab & Gear Plate FS + Index",
         "undefined": "CAB"
     },
-    {
+    "item-67" : {
         "id": 67,
         "productCode": "EC600RS",
         "description": "600mm Cab & Gear Plate RS + Index",
         "undefined": "CAB"
     },
-    {
+    "item-68" : {
         "id": 68,
         "productCode": "EC900H",
         "description": "Header",
         "undefined": "CAB"
     },
-    {
+    "item-69" : {
         "id": 69,
         "productCode": "EC900",
         "description": "900mm Equipment Cabinet & GP",
         "undefined": "CAB"
     },
-    {
+    "item-70" : {
         "id": 70,
         "productCode": "EC900FS",
         "description": "900mm Cabinet FS + Index",
         "undefined": "CAB"
     },
-    {
+    "item-71" : {
         "id": 71,
         "productCode": "EC900RS",
         "description": "900mm Cabinet RS + Index",
         "undefined": "CAB"
     },
-    {
+    "item-72" : {
         "id": 72,
         "productCode": "CAB-MISCH",
         "description": "Header",
         "undefined": "CAB"
     },
-    {
+    "item-73" : {
         "id": 73,
         "productCode": "CBPI346GPL",
         "undefined": "CAB"
     },
-    {
+    "item-74" : {
         "id": 74,
         "productCode": "EN56-14333",
         "undefined": "CAB"
     },
-    {
+    "item-75" : {
         "id": 75,
         "productCode": "REAR",
         "description": "unknown",
@@ -502,7 +500,7 @@ const items = {
         "en5614333max": 1,
         "undefined": "SER"
     },
-    {
+    "item-76" : {
         "id": 76,
         "productCode": "FRONT",
         "description": "unknown",
@@ -552,17 +550,17 @@ const items = {
         "en5614333max": 1,
         "undefined": "SER"
     },
-    {
+    "item-77" : {
         "id": 77,
         "productCode": "F1-F4 Transformer",
         "description": "Power Transformer, F4MKII (MM-31947N Rev 1)"
     },
-    {
+    "item-78" : {
         "id": 78,
         "productCode": "F16 Transformer",
         "description": "unknown"
     },
-    {
+    "item-79" : {
         "id": 79,
         "productCode": "24-1.3SWMPSU",
         "description": "24V 1.3A Switch Mode PSU",
@@ -682,7 +680,7 @@ const items = {
         "en5614333max": 2,
         "undefined": "PSU"
     },
-    {
+    "item-80" : {
         "id": 80,
         "productCode": "24-4SWMP",
         "description": "Offline PSU, 24V,4A (3A continuous)",
@@ -802,7 +800,7 @@ const items = {
         "en5614333max": 2,
         "undefined": "PSU"
     },
-    {
+    "item-81" : {
         "id": 81,
         "productCode": "24-12ASWMPS-MK2",
         "description": "24V 12A PSU with Controller, MK2",
@@ -883,7 +881,7 @@ const items = {
         "en5614333max": 2,
         "undefined": "PSU"
     },
-    {
+    "item-82" : {
         "id": 82,
         "productCode": "F120LPDC-DC",
         "description": "F120 Loop Driver DC-DC Power Supply",
@@ -964,7 +962,7 @@ const items = {
         "en5614333max": 1,
         "undefined": "PSU"
     },
-    {
+    "item-83" : {
         "id": 83,
         "productCode": "PSDR-120-24",
         "description": "unknown",
@@ -1045,7 +1043,7 @@ const items = {
         "en5614333max": 1,
         "undefined": "PSU"
     },
-    {
+    "item-84" : {
         "id": 84,
         "productCode": "MAGDHSPUKIT",
         "description": "unknown",
@@ -1126,7 +1124,7 @@ const items = {
         "en5614333max": 1,
         "undefined": "PSU"
     },
-    {
+    "item-85" : {
         "id": 85,
         "productCode": "SD-25B-XX",
         "description": "DC to DC Converter 24V I/P to 12V O/P @2.1A",
@@ -1190,7 +1188,7 @@ const items = {
         "f100adr3max": 2,
         "undefined": "PSU"
     },
-    {
+    "item-86" : {
         "id": 86,
         "productCode": "EVAC20W12V",
         "description": "Evac Amplifier 20W 12V",
@@ -1206,7 +1204,7 @@ const items = {
         "f16lrmax": 2,
         "undefined": "AMP"
     },
-    {
+    "item-87" : {
         "id": 87,
         "productCode": "EVAC20W24V",
         "description": "Evac Amplifier 20W 24V",
@@ -1326,7 +1324,7 @@ const items = {
         "en5614333max": 4,
         "undefined": "AMP"
     },
-    {
+    "item-88" : {
         "id": 88,
         "productCode": "EVAC50W24V",
         "description": "Evac Amplifier 50W 24V",
@@ -1446,7 +1444,7 @@ const items = {
         "en5614333max": 4,
         "undefined": "AMP"
     },
-    {
+    "item-89" : {
         "id": 89,
         "productCode": "EVAC120W24V",
         "description": "Evac Amplifer 120W24V (no tone generator), A1930A",
@@ -1528,7 +1526,7 @@ const items = {
         "en5614333max": 4,
         "undefined": "AMP"
     },
-    {
+    "item-90" : {
         "id": 90,
         "productCode": "EVAC250W24V",
         "description": "Evac Amplifier 250W24V (no tone generator) A1936",
@@ -1610,7 +1608,7 @@ const items = {
         "en5614333max": 4,
         "undefined": "AMP"
     },
-    {
+    "item-91" : {
         "id": 91,
         "productCode": "EVACGEN-NZ",
         "description": "Evac Tone Generator NZS4512",
@@ -1692,7 +1690,7 @@ const items = {
         "en5614333max": 4,
         "undefined": "AMP"
     },
-    {
+    "item-92" : {
         "id": 92,
         "productCode": "EVAC50PREA",
         "description": "Pre-Amp (Mic I/P) for EVAC50W24V Amplifier",
@@ -1812,7 +1810,7 @@ const items = {
         "en5614333max": 4,
         "undefined": "AMP"
     },
-    {
+    "item-93" : {
         "id": 93,
         "productCode": "F16ED8",
         "description": "F16e 8 Way LED Display Printbd, V1.06",
@@ -1856,7 +1854,7 @@ const items = {
         "f100afarcmax": 4,
         "undefined": "LED"
     },
-    {
+    "item-94" : {
         "id": 94,
         "productCode": "F100PDB12",
         "description": "12 Way Smart LED Display Bd for F100, F120, F16E",
@@ -1938,7 +1936,7 @@ const items = {
         "en5614333max": 1,
         "undefined": "LED"
     },
-    {
+    "item-95" : {
         "id": 95,
         "productCode": "F100PDB",
         "description": "8 Way LED Display Ext Board for F100, F120, F16E",
@@ -2020,7 +2018,7 @@ const items = {
         "en5614333max": 64,
         "undefined": "LED"
     },
-    {
+    "item-96" : {
         "id": 96,
         "productCode": "SGD7",
         "description": "SGD Board Version 7",
@@ -2142,7 +2140,7 @@ const items = {
         "en5614333max": 1,
         "undefined": "INTER"
     },
-    {
+    "item-97" : {
         "id": 97,
         "productCode": "SGD8MD",
         "description": "SGD8 2 Wire Multidrop",
@@ -2220,7 +2218,7 @@ const items = {
         "f120a40unzmax": 1,
         "undefined": "INTER"
     },
-    {
+    "item-98" : {
         "id": 98,
         "productCode": "SPIB-SGDAP",
         "description": "unknown",
@@ -2260,7 +2258,7 @@ const items = {
         "f120a40unzmax": 1,
         "undefined": "INTER"
     },
-    {
+    "item-99" : {
         "id": 99,
         "productCode": "AM-3",
         "description": "AA Type 5 Apartment Module - Non Hush",
@@ -2300,7 +2298,7 @@ const items = {
         "f120a40unzmax": 3,
         "undefined": "MISC"
     },
-    {
+    "item-100" : {
         "id": 100,
         "productCode": "F16PXTN",
         "description": "F16 Rear Service 8cct Extension Board :1997 - 12 Volt",
@@ -2314,7 +2312,7 @@ const items = {
         "f16lrmax": 3,
         "undefined": "MISC"
     },
-    {
+    "item-101" : {
         "id": 101,
         "productCode": "F100P2LB",
         "description": "F100A 2 Loop Extender Board",
@@ -2342,7 +2340,7 @@ const items = {
         "f100adr3max": 1,
         "undefined": "MISC"
     },
-    {
+    "item-102" : {
         "id": 102,
         "productCode": "F16EX",
         "description": "F16e 8cct Extension. Complete with LED display",
@@ -2384,7 +2382,7 @@ const items = {
         "f16etr97max": 3,
         "undefined": "MISC"
     },
-    {
+    "item-103" : {
         "id": 103,
         "productCode": "F16EX-97",
         "description": "F16e 8cct Extension. Complete with LED Display :1997",
@@ -2426,7 +2424,7 @@ const items = {
         "f16etr97max": 3,
         "undefined": "MISC"
     },
-    {
+    "item-104" : {
         "id": 104,
         "productCode": "F16ZBB",
         "description": "F16 Zonal Bell Monitor Board, 12V Version",
@@ -2490,7 +2488,7 @@ const items = {
         "f100adr3max": 2,
         "undefined": "MISC"
     },
-    {
+    "item-105" : {
         "id": 105,
         "productCode": "F100M-256NZ",
         "description": "F100 AVR-256 NZ Masterboard, V3.11N",
@@ -2518,7 +2516,7 @@ const items = {
         "f100adr3max": 1,
         "undefined": "MISC"
     },
-    {
+    "item-106" : {
         "id": 106,
         "productCode": "F100LCDMK2-NZ",
         "description": "F100LCD Display Board MK2 (Printboard +Overlay)",
@@ -2546,7 +2544,7 @@ const items = {
         "f100adr3max": 1,
         "undefined": "MISC"
     },
-    {
+    "item-107" : {
         "id": 107,
         "productCode": "F100LR",
         "description": "AA Loop Responder Board 8 I/P :1997",
@@ -2666,7 +2664,7 @@ const items = {
         "en5614333max": 10,
         "undefined": "MISC"
     },
-    {
+    "item-108" : {
         "id": 108,
         "productCode": "F100LR-3",
         "description": "AA Loop Responder Board 8 I/P",
@@ -2750,7 +2748,7 @@ const items = {
         "en5614333max": 10,
         "undefined": "MISC"
     },
-    {
+    "item-109" : {
         "id": 109,
         "productCode": "F100LRU",
         "description": "AA Loop Relay Board 4 Relays",
@@ -2834,7 +2832,7 @@ const items = {
         "en5614333max": 10,
         "undefined": "MISC"
     },
-    {
+    "item-110" : {
         "id": 110,
         "productCode": "NETCARD",
         "description": "NETWORK Card for F100-F120 LED / Mimics",
@@ -2918,7 +2916,7 @@ const items = {
         "en5614333max": 10,
         "undefined": "MISC"
     },
-    {
+    "item-111" : {
         "id": 111,
         "productCode": "NETCD-NCU",
         "description": "Network Card for Network Control / Display Unit",
@@ -3002,7 +3000,7 @@ const items = {
         "en5614333max": 1,
         "undefined": "MISC"
     },
-    {
+    "item-112" : {
         "id": 112,
         "productCode": "NET2GATE",
         "description": "Ethernet Gateway Card (Replaced NETGATE)",
@@ -3086,7 +3084,7 @@ const items = {
         "en5614333max": 1,
         "undefined": "MISC"
     },
-    {
+    "item-113" : {
         "id": 113,
         "productCode": "NCUPCB-N",
         "description": "Network Control PCB MK2 V210N, (SMD)",
@@ -3170,7 +3168,7 @@ const items = {
         "en5614333max": 1,
         "undefined": "MISC"
     },
-    {
+    "item-114" : {
         "id": 114,
         "productCode": "GPIB-NAF100",
         "description": "General Purpose Interface Bd",
@@ -3254,7 +3252,7 @@ const items = {
         "en5614333max": 1,
         "undefined": "MISC"
     },
-    {
+    "item-115" : {
         "id": 115,
         "productCode": "GPIB-NAF120",
         "f100af3min": 0,
@@ -3337,7 +3335,7 @@ const items = {
         "en5614333max": 1,
         "undefined": "MISC"
     },
-    {
+    "item-116" : {
         "id": 116,
         "productCode": "8WCOMR",
         "description": "8 Way Open Collector Relay Board",
@@ -3457,7 +3455,7 @@ const items = {
         "en5614333max": 1,
         "undefined": "MISC"
     },
-    {
+    "item-117" : {
         "id": 117,
         "productCode": "AGENTRELEASEC",
         "description": "Agent Release Controller Printboard Assembly V110",
@@ -3577,7 +3575,7 @@ const items = {
         "en5614333max": 1,
         "undefined": "MISC"
     },
-    {
+    "item-118" : {
         "id": 118,
         "productCode": "ACSDISPL+OL",
         "description": "REPLACES ARDISP+OL ACS printboard with ACS Overlay",
@@ -3697,7 +3695,7 @@ const items = {
         "en5614333max": 1,
         "undefined": "MISC"
     },
-    {
+    "item-119" : {
         "id": 119,
         "productCode": "F120PDB",
         "description": "F120 Power Distribution pcb assy V220 (MK2, blade fuses)",
@@ -3781,7 +3779,7 @@ const items = {
         "en5614333max": 1,
         "undefined": "MISC"
     },
-    {
+    "item-120" : {
         "id": 120,
         "productCode": "F100PFCU",
         "description": "AA Fan Control Unit",
@@ -3865,7 +3863,7 @@ const items = {
         "en5614333max": 5,
         "undefined": "MISC"
     },
-    {
+    "item-121" : {
         "id": 121,
         "productCode": "F100PFFSW",
         "description": "unknown",
@@ -3949,7 +3947,7 @@ const items = {
         "en5614333max": 5,
         "undefined": "MISC"
     },
-    {
+    "item-122" : {
         "id": 122,
         "productCode": "F100PFCRST",
         "description": "unknown",
@@ -4033,7 +4031,7 @@ const items = {
         "en5614333max": 5,
         "undefined": "MISC"
     },
-    {
+    "item-123" : {
         "id": 123,
         "productCode": "8SAAIB",
         "description": "AA Isolator Board - 8 Spur",
@@ -4117,7 +4115,7 @@ const items = {
         "en5614333max": 1,
         "undefined": "MISC"
     },
-    {
+    "item-124" : {
         "id": 124,
         "productCode": "CR6",
         "description": "6 Way Relay Output Module",
@@ -4175,7 +4173,7 @@ const items = {
         "ec900rsmax": 8,
         "undefined": "MISC"
     },
-    {
+    "item-125" : {
         "id": 125,
         "productCode": "SC-6",
         "description": "6 way Relay Output Module (supervised)",
@@ -4237,7 +4235,7 @@ const items = {
         "en5614333max": 1,
         "undefined": "MISC"
     },
-    {
+    "item-126" : {
         "id": 126,
         "productCode": "M210E-CZR",
         "description": "Conventional Zone Module 200S (replacement for M512ME)",
@@ -4321,7 +4319,7 @@ const items = {
         "en5614333max": 1,
         "undefined": "MISC"
     },
-    {
+    "item-127" : {
         "id": 127,
         "productCode": "M220E",
         "description": "AA Euro Dual Input Module",
@@ -4405,7 +4403,7 @@ const items = {
         "en5614333max": 1,
         "undefined": "MISC"
     },
-    {
+    "item-128" : {
         "id": 128,
         "productCode": "M221E",
         "description": "AA Euro Dual Input + Single Relay Output Module",
@@ -4489,7 +4487,7 @@ const items = {
         "en5614333max": 1,
         "undefined": "MISC"
     },
-    {
+    "item-129" : {
         "id": 129,
         "productCode": "M500MB",
         "description": "M500MB Monitor Module A.A. (equiv. M500ME)",
@@ -4573,7 +4571,7 @@ const items = {
         "en5614333max": 2,
         "undefined": "MISC"
     },
-    {
+    "item-130" : {
         "id": 130,
         "productCode": "M500R",
         "description": "AA Relay Module (Volt Free C/O contacts)",
@@ -4657,7 +4655,7 @@ const items = {
         "en5614333max": 2,
         "undefined": "MISC"
     },
-    {
+    "item-131" : {
         "id": 131,
         "productCode": "M500MB",
         "description": "M500MB Monitor Module A.A. (equiv. M500ME)",
@@ -4741,7 +4739,7 @@ const items = {
         "en5614333max": 2,
         "undefined": "MISC"
     },
-    {
+    "item-132" : {
         "id": 132,
         "productCode": "M500DMR",
         "description": "AA Dual Input + Dual Relay Output Module",
@@ -4825,7 +4823,7 @@ const items = {
         "en5614333max": 2,
         "undefined": "MISC"
     },
-    {
+    "item-133" : {
         "id": 133,
         "productCode": "M500S",
         "description": "AA Relay Module with Monitored Output",
@@ -4909,7 +4907,7 @@ const items = {
         "en5614333max": 2,
         "undefined": "MISC"
     },
-    {
+    "item-134" : {
         "id": 134,
         "productCode": "M501M",
         "description": "AA Mini Monitor / Input Module",
@@ -4993,7 +4991,7 @@ const items = {
         "en5614333max": 2,
         "undefined": "MISC"
     },
-    {
+    "item-135" : {
         "id": 135,
         "productCode": "24VCBKT",
         "description": "24V Control Board with Hardware Kit for Equip. Cab",
@@ -5077,7 +5075,7 @@ const items = {
         "en5614333max": 2,
         "undefined": "MISC"
     },
-    {
+    "item-136" : {
         "id": 136,
         "productCode": "24VCB",
         "description": "24V Control Timer for Power Supplies",
@@ -5161,7 +5159,7 @@ const items = {
         "en5614333max": 2,
         "undefined": "MISC"
     },
-    {
+    "item-137" : {
         "id": 137,
         "productCode": "VMB-12V",
         "description": "Voltage Monitor Board 12 volt",
@@ -5281,7 +5279,7 @@ const items = {
         "en5614333max": 2,
         "undefined": "MISC"
     },
-    {
+    "item-138" : {
         "id": 138,
         "productCode": "ITM",
         "description": "Isolate Timer Module",
@@ -5365,7 +5363,7 @@ const items = {
         "en5614333max": 2,
         "undefined": "MISC"
     },
-    {
+    "item-139" : {
         "id": 139,
         "productCode": "R2H24V",
         "description": "Dual Relay, slugged with Isolate, 2 x 4A C/O 24V (PCF100R2H)",
@@ -5485,7 +5483,7 @@ const items = {
         "en5614333max": 2,
         "undefined": "MISC"
     },
-    {
+    "item-140" : {
         "id": 140,
         "productCode": "F16ETRB",
         "description": "F16e Telecom Relay Printboard-24V",
@@ -5527,7 +5525,7 @@ const items = {
         "f16etr97max": 1,
         "undefined": "MISC"
     },
-    {
+    "item-141" : {
         "id": 141,
         "productCode": "F100AMM",
         "description": "F100A LCD Mini Mimic",
@@ -5611,7 +5609,7 @@ const items = {
         "en5614333max": 1,
         "undefined": "MISC"
     },
-    {
+    "item-142" : {
         "id": 142,
         "productCode": "SWSM0324-2",
         "description": "unknown",
@@ -5731,7 +5729,7 @@ const items = {
         "en5614333max": 2,
         "undefined": "MISC"
     },
-    {
+    "item-143" : {
         "id": 143,
         "productCode": "ZMB24V",
         "description": "Zone Bell Monitor Board, 24V",
@@ -5851,7 +5849,7 @@ const items = {
         "en5614333max": 1,
         "undefined": "MISC"
     },
-    {
+    "item-144" : {
         "id": 144,
         "productCode": "RLY24V",
         "description": "Aux Panel Relay 1x2 pole 4A 24V",
@@ -5971,7 +5969,7 @@ const items = {
         "en5614333max": 4,
         "undefined": "MISC"
     },
-    {
+    "item-145" : {
         "id": 145,
         "productCode": "PREAMP-RB",
         "description": "Printboard, Redback100V Amp. Interface",
@@ -6091,7 +6089,7 @@ const items = {
         "en5614333max": 1,
         "undefined": "MISC"
     },
-    {
+    "item-146" : {
         "id": 146,
         "productCode": "A1720TONEGEN",
         "description": "A1720 MP3 Tone Generator & Message Player",
@@ -6211,7 +6209,7 @@ const items = {
         "en5614333max": 1,
         "undefined": "MISC"
     },
-    {
+    "item-147" : {
         "id": 147,
         "productCode": "SWSM0324-2-D",
         "description": "unknown",
@@ -6331,7 +6329,7 @@ const items = {
         "en5614333max": 2,
         "undefined": "MISC"
     },
-    {
+    "item-148" : {
         "id": 148,
         "productCode": "SWTIMEMON200",
         "description": "unknown",
@@ -6451,7 +6449,7 @@ const items = {
         "en5614333max": 1,
         "undefined": "MISC"
     },
-    {
+    "item-149" : {
         "id": 149,
         "productCode": "SWTIMEMON300",
         "description": "unknown",
@@ -6571,7 +6569,7 @@ const items = {
         "en5614333max": 1,
         "undefined": "MISC"
     },
-    {
+    "item-150" : {
         "id": 150,
         "productCode": "MOXA",
         "description": "Serial to Ethernet Interface, MOXA NPort 5110",
@@ -6655,7 +6653,7 @@ const items = {
         "en5614333max": 1,
         "undefined": "MISC"
     },
-    {
+    "item-151" : {
         "id": 151,
         "productCode": "FUFHBS5025B",
         "description": "unknown",
@@ -6775,7 +6773,7 @@ const items = {
         "en5614333max": 1,
         "undefined": "MISC"
     },
-    {
+    "item-152" : {
         "id": 152,
         "productCode": "EVACHMIC",
         "description": "Hand Held Microphone C0334 w/- Chassis Mounting P0824",
@@ -6895,13 +6893,13 @@ const items = {
         "en5614333max": 1,
         "undefined": "MISC"
     },
-    {
+    "item-153" : {
         "id": 153,
         "productCode": "ISGAIFNZ",
         "description": "Galvanic Isolator Interface",
         "undefined": "MISC"
     },
-    {
+    "item-154" : {
         "id": 154,
         "productCode": "ISMTL5561",
         "description": "unknown",
@@ -7021,7 +7019,7 @@ const items = {
         "en5614333max": 1,
         "undefined": "MISC"
     },
-    {
+    "item-155" : {
         "id": 155,
         "productCode": "AAMCPT-WH",
         "f16emin": 0,
@@ -7140,7 +7138,7 @@ const items = {
         "en5614333max": 2,
         "undefined": "MISC"
     },
-    {
+    "item-156" : {
         "id": 156,
         "productCode": "AAMCPT-Y",
         "description": "unknown",
@@ -7260,7 +7258,7 @@ const items = {
         "en5614333max": 2,
         "undefined": "MISC"
     },
-    {
+    "item-157" : {
         "id": 157,
         "productCode": "SW-S3022",
         "description": "unknown",
@@ -7344,13 +7342,13 @@ const items = {
         "en5614333max": 1,
         "undefined": "MISC"
     },
-    {
+    "item-158" : {
         "id": 158,
         "productCode": "SW-S3024",
         "description": "S3024, Rotary Switch, 4 pole, 2 to 3 position",
         "undefined": "MISC"
     },
-    {
+    "item-159" : {
         "id": 159,
         "productCode": "SMS4",
         "description": "TXT Message Controller 4 input - 4 output",
@@ -7472,9 +7470,5 @@ const items = {
     }
 };
 
-exports.getItems = function(req,res){
-   res.set('Content-Type', 'application/json');
-
-   res.send(items);
-}
+module.exports = items
 

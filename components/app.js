@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-import {  Button, FormGroup, FormControl, Input, InputGroup, Radio, Tab, Tabs, Table  } from 'react-bootstrap'
+import {  Button, FormGroup, FormControl, Input, InputGroup, Radio, Tab, Tabs, Table  } from 'react-bootstrap';
+import items from '../controllers/index.js'
 // import {Tabs, Tab} from 'react-bootstrap-tabs';
-
+console.log("items data", items)
 class App extends Component {
 
   constructor (props) {
     super(props)
   }
-
   render () {
     return (
       <div>
@@ -176,86 +176,86 @@ class App extends Component {
             <h2>LED</h2>
             <form>
                 <FormGroup>
-                <Radio name="LED" value="F100PDB12">
-                    12 Way Smart LED Display Bd for F100, F120, F16E:  
-                    <select>
-                      <option value="0">0</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                    </select>
-                </Radio>
-                <Radio name="LED" value="F100PDB">
-                    8 Way LED Display Ext Board for F100, F120, F16E 
-                    <select>
-                      <option value="0">0</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                    </select>
-                </Radio>
-                <Radio name="LED" value="F100ZDRLY">
-                    8 Way Display Relay Extender Board 24V 
-                    <select>
-                      <option value="0">0</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                    </select>
-                </Radio>                
-                <Radio name="LED" value="L485LAC">
-                    RS485 LED Address Controller for F100, F120:  
-                    <select>
-                      <option value="0">0</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                    </select>
-                </Radio>                
-                <Radio name="LED" value="LAC12W">
-                    LED Zone Address Offset for 12-Way LED Board 
-                    <select>
-                      <option value="0">0</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                    </select>
-                </Radio>                
-                <Radio name="LED" value="48WOC-IF">
-                    RS485 to 48 Way Open Collector O/P Board 
-                    <select>
-                      <option value="0">0</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                    </select>
-                </Radio>                
-                <Radio name="LED" value="L485LAC-S">
-                    RS485 LED Address Controller for F100,F120, with STEADY outputs 
-                    <select>
-                      <option value="0">0</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                    </select>
-                </Radio>                
-                <Radio name="LED" value="F4-RMAX">
-                    Remote LED Mimic/Aux Relay Module 
-                    <select>
-                      <option value="0">0</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                    </select>
-                </Radio>
+                  <Radio name="LED" value="F100PDB12">
+                      12 Way Smart LED Display Bd for F100, F120, F16E:  
+                      <select>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                      </select>
+                  </Radio>
+                  <Radio name="LED" value="F100PDB">
+                      8 Way LED Display Ext Board for F100, F120, F16E 
+                      <select>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                      </select>
+                  </Radio>
+                  <Radio name="LED" value="F100ZDRLY">
+                      8 Way Display Relay Extender Board 24V 
+                      <select>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                      </select>
+                  </Radio>                
+                  <Radio name="LED" value="L485LAC">
+                      RS485 LED Address Controller for F100, F120:  
+                      <select>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                      </select>
+                  </Radio>                
+                  <Radio name="LED" value="LAC12W">
+                      LED Zone Address Offset for 12-Way LED Board 
+                      <select>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                      </select>
+                  </Radio>                
+                  <Radio name="LED" value="48WOC-IF">
+                      RS485 to 48 Way Open Collector O/P Board 
+                      <select>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                      </select>
+                  </Radio>                
+                  <Radio name="LED" value="L485LAC-S">
+                      RS485 LED Address Controller for F100,F120, with STEADY outputs 
+                      <select>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                      </select>
+                  </Radio>                
+                  <Radio name="LED" value="F4-RMAX">
+                      Remote LED Mimic/Aux Relay Module 
+                      <select>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                      </select>
+                  </Radio>
                 </FormGroup>
             </form>
           </Tab>
@@ -267,50 +267,19 @@ class App extends Component {
           </Tab>
           <Tab eventKey={9} title="Panel Items">
             <h2>Panel Items</h2>
-            <Table>
-                <tbody>
-                    <td valign="bottom" >Panel Size (Standard or Networked Panel 4512:2003):</td>
-                    <td align="left" valign="bottom">
-                        <select name="cabinet_size" size="1">
-                            <option value="F120AF-3">FS 2 Loop Panel 900mm</option>
-                            <option value="F120AR-3">RS 2 Loop Panel 900mm</option>
-                        </select>
-                    </td>
-                </tbody>
-            </Table>
+            <form>
+              Panel Size (Standard or Networked Panel 4512:2003):
+              <select name="cabinet_size" size="1">
+                  <option value="F120AF-3">FS 2 Loop Panel 900mm</option>
+                  <option value="F120AR-3">RS 2 Loop Panel 900mm</option>
+              </select>             
+            </form>
           </Tab>
           <Tab eventKey={10} title="Summary">
             <h2>Summary</h2>
           </Tab>            
         </Tabs>
         <hr/>
-        
-        <div className="checkoutCart">
-          <Table striped bordered condensed hover>
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Item</th>
-                <th>Description</th>
-                <th>Quantity</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>F16 Panel</td>
-                <td>Panel enclosing for housing components and controllers</td>
-                <td>2</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Amp 42F</td>
-                <td>Amp unit for power supply units</td>
-                <td>4</td>
-              </tr>
-            </tbody>
-          </Table>
-        </div>
       </div>
     )
   }
