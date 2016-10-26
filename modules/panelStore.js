@@ -15,16 +15,19 @@ class PanelOrder {
 export class ItemStore {
     @observable items = []
     @observable filter = ""
-    @completed get filteredPanelOrder() {
+    @computed get filteredPanelOrder() {
         var matchesFilter = new RegExp(this.filter, "i")
-        return this.items.filter(items => !this.filter || matchesFilter.test(todo.value))
+        return this.items.filter(item => !this.filter || matchesFilter.test(item.value))
     }
     createItem(value) {
-        this.items.push(new PanelOrder(value))
+        this.items.push(new Item(value))
     }
     clearComplete = () => {
-        const incompleteTodos = this.todos.filter(todo => !todo.complete)
-        this.todos.replace(incompleteTodos)
+        const incompleteTodos = this.items.filter(item => !item.complete)
+        this.items.replace(incompleteTodos)
     }
 }
-export default new ItemStore
+
+var store = window.store = new ItemStore
+
+export default store

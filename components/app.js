@@ -6,15 +6,15 @@ import items from '../controllers/index.js'
 console.log("items data", items.id3.productCode);
 
 @observer
-export default class App extends React.Component {
+class App extends React.Component {
 
   constructor (props) {
     super(props)
   }
 
-  creatNew(e) {
+  createNew(e) {
     if (e.which === 13) {
-      this.props.store.createTodo(e.target.value)
+      this.props.store.createItem(e.target.value)
       e.target.value =""
     }
   }
@@ -23,17 +23,17 @@ export default class App extends React.Component {
     this.props.store.filer = e.target.value
   }
 
-  toggleComplete(todo) {
-    todo.complete =!todo.complete
+  toggleComplete(item) {
+    todo.complete =!item.complete
   }
 
   render () {
-    const { clearComplete, filter, filteredPanelOrder, todos } = this.props.store
+    const { clearComplete, filter, filteredPanelOrder, items } = this.props.store
 
     const itemLis = filteredPanelOrder.map(
       items => (
         <li key={items.id}>
-          <input type="checkbox" onChange={this.toggleComplete.bind(this, items)} value={items.complete} checked={item.complete} />
+          <input type="checkbox" onChange={this.toggleComplete.bind(this, items)} value={items.complete} checked={items.complete} />
           <span>{items.value}</span>
           </li>
         ))
@@ -46,7 +46,7 @@ export default class App extends React.Component {
             <h2>Country Standard</h2>
             <form>
                 <FormGroup>
-                    <Radio name="country" data-toggle="Button" value="NZS4512: 1997">
+                    <Radio name="country" data-toggle="Button" value="NZS4512: 1997" onSelect={this.createNew.bind(this)}>
                       New Zealand NZS4512: 1997
                     </Radio>
                     <Radio name="country" data-toggle="Button" value="NZS4512: 2003/2010">
@@ -319,4 +319,4 @@ export default class App extends React.Component {
 
 }
 
-export default App
+export default observer(App)
