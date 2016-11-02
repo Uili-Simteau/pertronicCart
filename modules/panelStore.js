@@ -13,14 +13,14 @@ class PanelOrder {
 }
 
 export class ItemStore {
-    @observable items = []
+    @observable items = ["hello again", "got milk?"]
     @observable filter = ""
     @computed get filteredPanelOrder() {
         var matchesFilter = new RegExp(this.filter, "i")
         return this.items.filter(item => !this.filter || matchesFilter.test(item.value))
     }
     createItem(value) {
-        this.items.push(new Item(value))
+        this.items.push(value)
     }
     clearComplete = () => {
         const incompleteTodos = this.items.filter(item => !item.complete)
