@@ -1,16 +1,43 @@
 import React, { Component } from 'react'
-import {  Button, FormGroup, FormControl, Input, InputGroup, Radio, Tab, Tabs, Table  } from 'react-bootstrap';
+import {  Button, FormGroup, FormControl, Input, InputGroup, Radio, Tab, Tabs, Table  } from 'react-bootstrap'
+import { observer } from "mobx-react"
 import items from '../controllers/index.js'
 
 console.log("items data", items.id3.productCode);
 
-
-class App extends Component {
+@observer
+class App extends React.Component {
 
   constructor (props) {
     super(props)
   }
+
+  createNew(e) {
+    if (e.which === 13) {
+      this.props.store.createItem(e.target.value)
+      e.target.value =""
+    }
+  }
+
+  filter(e) {
+    this.props.store.filer = e.target.value
+  }
+
+  toggleComplete(item) {
+    todo.complete =!item.complete
+  }
+
   render () {
+    const { clearComplete, filter, filteredPanelOrder, items } = this.props.store
+
+    const itemLis = filteredPanelOrder.map(
+      items => (
+        <li key={items.id}>
+          <input type="checkbox" onChange={this.toggleComplete.bind(this, items)} value={items.complete} checked={items.complete} />
+          <span>{items.value}</span>
+          </li>
+        ))
+    
     return (
       <div>
         <h1>Welcome to {this.props.name}</h1>
@@ -19,7 +46,7 @@ class App extends Component {
             <h2>Country Standard</h2>
             <form>
                 <FormGroup>
-                    <Radio name="country" data-toggle="Button" value="NZS4512: 1997">
+                    <Radio name="country" data-toggle="Button" value="NZS4512: 1997" onSelect={this.createNew.bind(this)}>
                       New Zealand NZS4512: 1997
                     </Radio>
                     <Radio name="country" data-toggle="Button" value="NZS4512: 2003/2010">
@@ -36,6 +63,8 @@ class App extends Component {
           </Tab>
           <Tab eventKey={2} title="System">
             <h2>Panel Selection</h2>
+            <input className="new" onKeyPress={this.createNew.bind(this)} />
+            <input className="filter" value={filter} onChange={this.filter.bind(this)} />
             <form>
                 <Radio name="system" data-toggle="Button" >
                   <span>F120A:   </span>       
@@ -282,10 +311,12 @@ class App extends Component {
           </Tab>            
         </Tabs>
         <hr/>
+        <ul>{itemLis}</ul>
+        <a href="#" onClick={clearComplete}>Clear Complete</a>
       </div>
     )
   }
 
 }
 
-export default App
+export default observer(App)
