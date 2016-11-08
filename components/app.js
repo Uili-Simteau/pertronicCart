@@ -92,12 +92,12 @@ class App extends React.Component {
           </Tab>
           <Tab eventKey={5} title="Amp">
             <h2>Amp</h2>
-              <Radio>
+              <Radio name="amplifiers" value="50WApm" onChange={this.createNew.bind(this)}>
                 <span>
                   Number of 50W amplifiers required:       
                 </span>
                 <select>
-                  <option value="0">
+                  <option value="50W amp x 0">
                     0
                   </option>
                   <option value="1">
@@ -128,20 +128,20 @@ class App extends React.Component {
               <div className="50wAmp">
                 <span>Is 50W apmlifier run by: </span>
                   <select name="amp_connection" size="1">
-                    <option value="RS485">
+                    <option value="RS485" onChange={this.createNew.bind(this)}>
                       RS485
                     </option>
-                    <option value="Bell Relay">
+                    <option value="Bell Relay"onSelect={this.createNew.bind(this)}>
                       Bell Relay
                     </option>
                   </select>
                 </div>
               </Radio>  
-              <Radio> 
+              <Radio name="amplifiers" value="20WApm"onChange={this.createNew.bind(this)}> 
                 <span>
                   Number of 20W amplifiers required:       
                 </span>
-                <select>
+                <select onChange={this.createNew.bind(this)}>
                   <option value="0">
                     0
                   </option>
@@ -158,7 +158,7 @@ class App extends React.Component {
             <h2>LED</h2>
             <form>
                 <FormGroup>
-                  <Radio name="LED" value="F100PDB12">
+                  <Radio name="LED" value="F100PDB12" onChange={this.createNew.bind(this)}>
                       12 Way Smart LED Display Bd for F100, F120, F16E:  
                       <select>
                         <option value="0">0</option>
@@ -168,7 +168,7 @@ class App extends React.Component {
                         <option value="4">4</option>
                       </select>
                   </Radio>
-                  <Radio name="LED" value="F100PDB">
+                  <Radio name="LED" value="F100PDB" onChange={this.createNew.bind(this)}>
                       8 Way LED Display Ext Board for F100, F120, F16E 
                       <select>
                         <option value="0">0</option>
@@ -178,7 +178,7 @@ class App extends React.Component {
                         <option value="4">4</option>
                       </select>
                   </Radio>
-                  <Radio name="LED" value="F100ZDRLY">
+                  <Radio name="LED" value="F100ZDRLY" onChange={this.createNew.bind(this)}>
                       8 Way Display Relay Extender Board 24V 
                       <select>
                         <option value="0">0</option>
@@ -188,7 +188,7 @@ class App extends React.Component {
                         <option value="4">4</option>
                       </select>
                   </Radio>                
-                  <Radio name="LED" value="L485LAC">
+                  <Radio name="LED" value="L485LAC" onChange={this.createNew.bind(this)}>
                       RS485 LED Address Controller for F100, F120:  
                       <select>
                         <option value="0">0</option>
@@ -198,7 +198,7 @@ class App extends React.Component {
                         <option value="4">4</option>
                       </select>
                   </Radio>                
-                  <Radio name="LED" value="LAC12W">
+                  <Radio name="LED" value="LAC12W" onChange={this.createNew.bind(this)}>
                       LED Zone Address Offset for 12-Way LED Board 
                       <select>
                         <option value="0">0</option>
@@ -208,7 +208,7 @@ class App extends React.Component {
                         <option value="4">4</option>
                       </select>
                   </Radio>                
-                  <Radio name="LED" value="48WOC-IF">
+                  <Radio name="LED" value="48WOC-IF" onChange={this.createNew.bind(this)}>
                       RS485 to 48 Way Open Collector O/P Board 
                       <select>
                         <option value="0">0</option>
@@ -218,7 +218,7 @@ class App extends React.Component {
                         <option value="4">4</option>
                       </select>
                   </Radio>                
-                  <Radio name="LED" value="L485LAC-S">
+                  <Radio name="LED" value="L485LAC-S" onChange={this.createNew.bind(this)}>
                       RS485 LED Address Controller for F100,F120, with STEADY outputs 
                       <select>
                         <option value="0">0</option>

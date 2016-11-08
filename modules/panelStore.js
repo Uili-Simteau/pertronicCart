@@ -13,12 +13,13 @@ class PanelOrder {
 }
 
 export class ItemStore {
-    @observable items = ["hello again", "got milk?"]
+    @observable items = []
     @observable filter = ""
     @computed get filteredPanelOrder() {
         var matchesFilter = new RegExp(this.filter, "i")
         return this.items.filter(item => !this.filter || matchesFilter.test(item.value))
     }
+
     createItem(value) {
         this.items.push(value)
     }
