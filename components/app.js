@@ -182,7 +182,7 @@ class App extends React.Component {
                         <option value="4">4</option>
                       </select>
                   </Radio>
-                  <Radio name="LED" value="F100ZDRLY">
+                  <Radio name="LED" value="F100ZDRLY" onChange={this.createNew.bind(this)}>
                       8 Way Display Relay Extender Board 24V 
                       <select>
                         <option value="0">0</option>
@@ -192,7 +192,7 @@ class App extends React.Component {
                         <option value="4">4</option>
                       </select>
                   </Radio>                
-                  <Radio name="LED" value="L485LAC">
+                  <Radio name="LED" value="L485LAC" onChange={this.createNew.bind(this)}>
                       RS485 LED Address Controller for F100, F120:  
                       <select>
                         <option value="0">0</option>
@@ -202,7 +202,7 @@ class App extends React.Component {
                         <option value="4">4</option>
                       </select>
                   </Radio>                
-                  <Radio name="LED" value="LAC12W">
+                  <Radio name="LED" value="LAC12W" onChange={this.createNew.bind(this)}>
                       LED Zone Address Offset for 12-Way LED Board 
                       <select>
                         <option value="0">0</option>
@@ -212,7 +212,7 @@ class App extends React.Component {
                         <option value="4">4</option>
                       </select>
                   </Radio>                
-                  <Radio name="LED" value="48WOC-IF">
+                  <Radio name="LED" value="48WOC-IF" onChange={this.createNew.bind(this)}>
                       RS485 to 48 Way Open Collector O/P Board 
                       <select>
                         <option value="0">0</option>
@@ -222,7 +222,7 @@ class App extends React.Component {
                         <option value="4">4</option>
                       </select>
                   </Radio>                
-                  <Radio name="LED" value="L485LAC-S">
+                  <Radio name="LED" value="L485LAC-S" onChange={this.createNew.bind(this)}>
                       RS485 LED Address Controller for F100,F120, with STEADY outputs 
                       <select>
                         <option value="0">0</option>
