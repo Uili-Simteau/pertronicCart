@@ -13,6 +13,7 @@ class PanelOrder {
 }
 
 export class ItemStore {
+
     @observable items = []
     @observable filter = ""
     @computed get filteredPanelOrder() {
@@ -21,7 +22,7 @@ export class ItemStore {
     }
 
     createItem(value) {
-        this.items.push(value)
+        this.items.push(new PanelOrder(value))
     }
     clearComplete = () => {
         const incompleteTodos = this.items.filter(item => !item.complete)

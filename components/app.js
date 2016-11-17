@@ -37,7 +37,11 @@ class App extends React.Component {
       items => (
         <li key={items.id}>
           <input type="checkbox" onChange={this.toggleComplete.bind(this, items)} value={items.complete} checked={items.complete} />
+<<<<<<< HEAD
+          {items.value}
+=======
           {items}
+>>>>>>> 9123bc8337b4aaf564e3813c935e35c3f1a5891f
           </li>
         ))
     
@@ -325,7 +329,9 @@ class App extends React.Component {
         <h2>Selection</h2>
         <ul>{itemLis}</ul>
         <Button>
-          <a  href="#" onClick={clearComplete}>Clear Completed</a>
+
+          <a  href="#" onClick={clearComplete}>Remove ticked items</a>
+
         </Button>  
       </div>
     )
