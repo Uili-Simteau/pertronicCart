@@ -13,7 +13,11 @@ class PanelOrder {
 }
 
 export class ItemStore {
+<<<<<<< HEAD
     @observable items = ["banana"]
+=======
+    @observable items = ["hello again", "got milk?"]
+>>>>>>> 9123bc8337b4aaf564e3813c935e35c3f1a5891f
     @observable filter = ""
     @computed get filteredPanelOrder() {
         var matchesFilter = new RegExp(this.filter, "i")
